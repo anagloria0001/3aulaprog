@@ -1,0 +1,20 @@
+#include <stdio.h>
+#define N 4 
+
+int U[N]={1,2,3,4};
+int V[N]={1,2,3,4};
+int igual;
+
+int main(){
+    int i;
+    igual=1;
+    for(i=0;i<N;i++){
+        if(U[i]!=V[i]){
+            igual=0;
+            break;
+        }
+    }
+    
+    
+    return 0;
+}
