@@ -1,0 +1,19 @@
+#include <stdio.h>
+#define N 5 
+
+int L[N]={1,2,3,2,1};
+int palindromo;
+
+int main(){
+    int i, j;
+    palindromo=1;
+    j=N-1;
+    
+    for(i=0;i<N/2;i++){
+        if(L[i]!=L[j]){
+            palindromo=0;
+            j--;
+        }
+    }
+    return 0;
+}
