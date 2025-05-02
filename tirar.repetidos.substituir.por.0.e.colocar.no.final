@@ -1,0 +1,28 @@
+#include <stdio.h>
+#define N 8 
+#define M 8
+
+int L[N]={2,3,3,5,7,7,7,9};
+
+int main(){
+    int i;
+    for(i=1;i<N;i++){
+        if(L[i]==L[i-1]){
+            L[i-1]=0;
+        }
+    }  
+    int B[M];
+    int pos=0;
+    int n=M-1;
+    for(i=0;i<N;i++){    
+        if(L[i]!=0){
+        B[pos]=L[i];
+        pos++;
+        }else if(L[i]==0){
+            B[n]=L[i];
+            n--;
+        }
+    }
+    for(i=0;i<N;i++) printf("%d ", B[i]);
+    return 0;
+}
